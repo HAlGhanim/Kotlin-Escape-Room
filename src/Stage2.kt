@@ -3,7 +3,7 @@
 // 💀 Problem: The healing potion is null, causing an error!
 
 fun healPlayer(potion: String?) {
-    println("Drinking potion: " + potion.toUpperCase())  // 💣 Possible crash!
+    println("Drinking potion: " + potion?.toUpperCase())  // 💣 Possible crash!
 }
 
 fun main() {

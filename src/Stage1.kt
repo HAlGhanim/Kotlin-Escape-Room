@@ -3,7 +3,7 @@
 // 💀 Problem: The door lock’s PIN code is incorrect because of an integer division issue!
 
 fun main() {
-    val pinCode = 7 / 2  // Should be 3.5
+    val pinCode = 7.0 / 2.0  // Should be 3.5
     if (pinCode == 3.5) {
         println("Door Unlocked!")
     } else {

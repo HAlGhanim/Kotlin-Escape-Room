@@ -4,14 +4,14 @@
 
 fun main() {
     val chest = listOf("Gold", "Silver", "Gold", "Diamond", "Silver")
-    var uniqueLoot = listOf<String>()
+    var uniqueLoot = mutableListOf<String>()
 
     for (item in chest) {
         if (!uniqueLoot.contains(item)) {
             uniqueLoot.add(item)  // 💣 Error: listOf() creates an immutable list
         }
     }
-    println("Loot: $uniqueLoot")
+    println("Loot: ${uniqueLoot.sort()}")
 }
 
 // 🥤 Escape Condition: If you remove duplicates successfully, you move to Stage 4.

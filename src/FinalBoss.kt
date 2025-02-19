@@ -2,7 +2,7 @@
 
 // 💀 Problem: The Guardian blocks the exit because the class structure is broken!
 
-open class Guardian(val name: String) {
+open class Guardian(var name: String) {
     fun speak() = println("I am $name, the dungeon guardian!")
 }
 
@@ -14,7 +14,9 @@ class FireGuardian(name: String) : Guardian(name) {
 
 fun main() {
     val boss = FireGuardian("Inferno")
-    println("Type: " + boss.guardianType)  // 💣 Error: Companion object is not an instance property
+    boss.name= boss.name.reversed()
+    println(boss.name)
+    println("Type: " + FireGuardian.guardianType)  // 💣 Error: Companion object is not an instance property
 }
 
 
